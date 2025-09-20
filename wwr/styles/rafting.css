@@ -15,7 +15,7 @@
 
 body {
     font-family: var(--body-font) ;
-    color: var(--accent1-color) ;
+    color:#000 ;
 }
 
 header, main, footer {
@@ -35,7 +35,7 @@ h1, h2 {
 
 nav, p, section, article {
     margin: 16px;
-    padding: 8px;
+    padding: 10px;
 }
 
 h1 {
@@ -55,7 +55,7 @@ h2 {
     width: 100%;
     padding: 20px;
     text-align: center;
-    opacity: 0.7;
+    opacity: 0.8;
     background-color: var(--accent1-color);
     color: #fff;
 }
@@ -71,8 +71,9 @@ article {
     color: #fff;
 }
 
+
 footer {
-    margin-top: 15px;
+    margin-top: 50px;
     border-top: 1px solid #000;
     text-align: center;
 }
@@ -86,6 +87,8 @@ footer {
 .socialmedia img {
     padding: 3px;
     width: 50px;
+
+    
 }
 
 .hero {
@@ -102,4 +105,5 @@ footer {
 .hero article img {
     float: right;
     width: 125px;
+    margin: 10px;
 }
