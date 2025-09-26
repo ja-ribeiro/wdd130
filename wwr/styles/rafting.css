@@ -62,9 +62,7 @@ nav ul a {
     color:#000;
     padding: 16px;
     text-align: center;
-    
 }
-
 
 h1 {
     position: absolute;
@@ -83,7 +81,6 @@ h2 {
     width: 100%;
     padding: 20px;
     text-align: center;
-    opacity: ;
     background-color: var(--accent2-color);
     color: #fff;
 }
@@ -98,7 +95,6 @@ article {
     background-color: var(--accent1-color);
     color: #fff;
 }
-
 
 footer {
     margin-top: 50px;
