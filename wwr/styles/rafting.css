@@ -2,7 +2,7 @@
     --primary-color: #055a05;
     --secondary-color: #f4a261;
     --accent1-color: #264653;
-    --accent2-color: #e9c46a;
+    --accent2-color: rgb(66, 137, 141);
     --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
@@ -83,8 +83,8 @@ h2 {
     width: 100%;
     padding: 20px;
     text-align: center;
-    opacity: 0.8;
-    background-color: var(--accent1-color);
+    opacity: 0.7;
+    background-color: var(--accent2-color);
     color: #fff;
 }
 
@@ -135,4 +135,58 @@ footer {
     float: right;
     width: 125px;
     margin: 10px;
+}
+
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 2rem;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.history img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5. 1fr);
+    gap: 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.gallery img {
+    width: 145px;
+    height: auto;
+    position:relative;
+    height: auto;    
+}
+
+.gallery figcaption {
+   margin-top: 5px;
+   text-align: center;
+}
+
+.adventure {
+    position:relative;
+    top: 20px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background-color: var(--accent2-color);
+    color: #fff;
+}
+
+.adventure h2 {
+    text-align: center;
+    margin: 10px;
+    height: 90px
 }
