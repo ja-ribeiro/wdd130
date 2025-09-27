@@ -1,8 +1,8 @@
 :root {
-    --primary-color: #055a05;
+    --primary-color: #000;
     --secondary-color: #f4a261;
-    --accent1-color: #2d5666;
-    --accent2-color: rgb(71, 129, 146);
+    --accent1-color: #000000;
+    --accent2-color: rgb(54, 122, 71);
     --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
@@ -169,7 +169,7 @@ footer {
 .gallery figcaption {
    margin-top: 5px;
    text-align: center;
-   background-color: rgb(51, 91, 107);
+   background-color: rgb(29, 82, 40);
    padding: 5px;
    border-radius: 4px;
 }
