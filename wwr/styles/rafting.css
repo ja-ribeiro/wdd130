@@ -15,7 +15,7 @@
 
 body {
     font-family: var(--body-font) ;
-    color:#000 ;
+    color:var(--primary-color) ;
 }
 
 header, main, footer {
@@ -82,7 +82,8 @@ h2 {
     padding: 20px;
     text-align: center;
     background-color: var(--accent2-color);
-    color: #fff;
+    opacity: 0.7;
+    color: #fff
 }
 
 article {
@@ -150,56 +151,66 @@ footer {
     display: block;
 }
 
-.gallery {
+.gallery, .team-members {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 1rem;
     max-width: 1100px;
     margin: 0 auto;
     display: flex;
+    justify-content: center;
 }
 
-.gallery img {
+.gallery img, .team-members img {
     width: 145px;
-    height: auto;
-    position:relative;
-    height: auto;  
+    height: 145px;
+    object-fit: cover;
+    position:relative;  
 }
 
-.gallery figcaption {
+.gallery figcaption, .team-members figcaption {
    margin-top: 5px;
    text-align: center;
    background-color: rgb(29, 82, 40);
    padding: 5px;
    border-radius: 4px;
+   color: #fff
 }
 
-.adventure {
-    position:relative;
-    top: 20px;
-    width: 100%;
-    padding: 20px;
+section.contact-info h1 {
+    position: relative;
     text-align: center;
-    background-color: var(--accent2-color);
-    color: #fff;
-}
-
-.adventure h2 {
-    text-align: center;
-    margin: 10px;
-    height: 90px
-}
-
-
-
-
-section.contact-info {
-    text-align: center;
-    padding: 20px;
+    padding: 2px;
+    margin-bottom: 15px;
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    background-color: transparent;
 }
 
 section.contact-info p {
-    margin: 1px 0;
+    margin: 0px;
+    text-align: center;
+}
+
+section.team-section, section.adventure {
+    position: relative;
+    width: 100%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+section.team-section h2, section.adventure h2 {
+    margin-bottom: 50px;
+    color:#fff;
+    background-color: var(--accent2-color);
+    opacity: 0.8;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
 }
 
 section.contact-content {
@@ -210,25 +221,22 @@ section.contact-content {
     flex-wrap: wrap;
     padding: 20px;
 }
-.map-container {
-    flex: 1;
-    width: 300px;
-    text-align: center;
-}
 
 form.contact-form {
     flex: 1;
     min-width: 300px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
+
 form.contact-form label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
+    text-align: left;
 }
-
+   
 form.contact-form input[type="text"],
 form.contact-form input[type="email"],
 form.contact-form textarea {
@@ -236,27 +244,12 @@ form.contact-form textarea {
     padding: 8px;
     border: 1px solid #333;
     border-radius: 4px;
-    box-sizing: border-box;
+    box-sizing: border-box;    
 }
+
 form.contact-form input[type="radio"],
 form.contact-form input[type="checkbox"] {
-    margin-right: 5px;
-}
-
-
-
-form.contact-form input[type="text"],
-form.contact-form input[type="email"],
-form.contact-form textarea {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #333;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-form.contact-form input[type="radio"],
-form.contact-form input[type="checkbox"] {
-    margin-right: 5px;
+    margin-right: 5px;  
 }
 
 form.contact-form button {
@@ -266,34 +259,4 @@ form.contact-form button {
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
-}
-
-
-section.team-section {
-    background-color: #f4f4f4;
-    padding: 20px;
-    text-align: center;
-}
-section.team-section h2 {
-    margin-bottom: 15px;
-}
-.team-members {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.employee-profile {
-    max-width: 200px;
-    text-align: center;
-}
-.employee-profile img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-}
-.employee-profile figcaption {
-    margin-top: 5px;
-    font-style: italic;
 }
