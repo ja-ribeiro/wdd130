@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trips - Adventure Raft Co. Whitewater Rafting</title>
+    <meta name="description" content="Explo our adventures">
+    <meta name="author" content="Juliana Alves Ribeiro">
+
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="images/logo.png" alt="logo wwr">
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="trip">
+            <h1>Explore Our Trips</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum veritatis ad possimus. Illo minus
+                perspiciatis deserunt quos ratione voluptate itaque, eius quam totam excepturi vero molestias libero,
+                nostrum corrupti expedita.</p>
+        </div>
+
+        <section class="trip-carousel">
+            <div class="trip-slider">
+                <div class="trip-slide">
+                    <img src="images/gallery-4.jpg" alt="Wild Rapids Adventure">
+                    <div class="trip-info">
+                        <h3>Tag</h3>
+                        <p>Experience the ultimate adrenaline rush with our advanced-level rafting expedition through
+                            the roaring
+                            rapids of the Colorado River.</p>
+                    </div>
+                </div>
+
+                <div class="trip-slide">
+                    <img src="images/gallery-3.jpg" alt="Family River Fun">
+                    <div class="trip-info">
+                        <h3>Happy Raft</h3>
+                        <p>A safe and exciting rafting experience for families and beginners. Perfect for kids and
+                            first-time
+                            rafters!</p>
+                    </div>
+                </div>
+
+                <div class="trip-slide">
+                    <img src="images/gallery-1.jpg" alt="Scenic Canyon Ride">
+                    <div class="trip-info">
+                        <h3>Florida Summer</h3>
+                        <p>Enjoy breathtaking canyon views and calm waters. A relaxing and unforgettable journey
+                            surrounded by
+                            nature.</p>
+                    </div>
+                </div>
+
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+            </div>
+        </section>
+
+        <section class="trip-table">
+            <h2>All Available Trips</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Trip Name</th>
+                        <th>Duration</th>
+                        <th>Difficulty</th>
+                        <th>Price</th>
+                        <th>Book Now</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Happy Raft</td>
+                        <td>1 hour</td>
+                        <td>Beginner</td>
+                        <td>$35</td>
+                        <td><a href="contact.html" class="table">Reserve</a></td>
+                    </tr>
+                    <tr>
+                        <td>Florida Summer</td>
+                        <td>3 Hours</td>
+                        <td>Beginner</td>
+                        <td>$75</td>
+                        <td><a href="contact.html" class="table">Reserve</a></td>
+                    </tr>
+                    <tr>
+                        <td>Tag</td>
+                        <td>1 Day</td>
+                        <td>Intermediate</td>
+                        <td>$150</td>
+                        <td><a href="contact.html" class="table">Reserve</a></td>
+                    </tr>
+                    <tr>
+                        <td>Garganta do diabo</td>
+                        <td>3 Days</td>
+                        <td>Advanced</td>
+                        <td>$450</td>
+                        <td><a href="contact.html" class="table">Reserve</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="trip-contact">
+            <h2>Find your Next Adventure!</h2>
+            <p>Have questions or want to book your next rafting trip? We would love to hear from you!</p>
+            <a href="contact.html" class="btn">Contact Us</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;2025 | Adventure Raft Co. | Juliana Alves Ribeiro</p>
+
+        <nav class="socialmedia">
+            <a href="https://facebook.com">
+                <img src="images/facebook-bw.png" alt="Facebook Icon">
+            </a>
+            <a href="https://linkedin.com">
+                <img src="images/linkedin-bw.png" alt="Linkedin Icon">
+            </a>
+            <a href="https://instagram.com">
+                <img src="images/instagram-bw.png" alt="Instagram Icon">
+            </a>
+        </nav>
+    </footer>
+    <script>
+        const slides = document.querySelectorAll('.trip-slide');
+        const nextBtn = document.querySelector('.next');
+        const prevBtn = document.querySelector('.prev');
+        let current = 0;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+        }
+
+        nextBtn.addEventListener('click', () => {
+            current = (current + 1) % slides.length;
+            showSlide(current);
+        });
+
+        prevBtn.addEventListener('click', () => {
+            current = (current - 1 + slides.length) % slides.length;
+            showSlide(current);
+        });
+
+        // Optional: Auto-switch every 6 seconds
+        setInterval(() => {
+            current = (current + 1) % slides.length;
+            showSlide(current);
+        }, 6000);
+    </script>
+</body>
+
+</html>

@@ -165,7 +165,9 @@ footer {
     width: 145px;
     height: 145px;
     object-fit: cover;
-    position:relative;  
+    position:relative;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
 .gallery figcaption, .team-members figcaption {
@@ -267,10 +269,6 @@ form.contact-form button {
     font-weight: bold;
 }
 
-
-
-
-
 .cta-btn {
   background-color: var(--accent2-color, #0a6);
   color: #fff;
@@ -279,31 +277,24 @@ form.contact-form button {
   text-decoration: none;
   font-weight: bold;
 }
-.cta-btn:hover {
-  background-color: var(--accent1-color, #084);
-}
 
 .newsletter {
-  background-color: #8bb398; /* soft green tone */
+  background-color: #eff3f1;
   padding: 40px 20px;
-  text-align: left;
-  color: #fff;
 }
 
 .newsletter h2 {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   font-size: 1.8rem;
-}
-
-.newsletter p {
-  margin-bottom: 20px;
-  color: #f9f9f9;
+  background-color: transparent;
+  color:#000
 }
 
 .newsletter-form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding: 15px;
   gap: 10px;
   max-width: 300px;
 }
@@ -326,12 +317,6 @@ form.contact-form button {
   font-weight: bold;
 }
 
-.newsletter-form button:hover {
-  background-color: #1b4332;
-}
-
-
-
 .about-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -353,3 +338,122 @@ form.contact-form button {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
+
+.trip h1 {
+    position: relative;
+    background-color: transparent;
+    color: #000;
+    font-size: 55px;
+    padding: 20px;
+}
+
+.trip-contact h2 {
+    background-color: transparent;
+    color: #000;
+    font-weight:bolder;
+    font-size: 40px;
+    text-align: left;
+}
+
+.trip-contact .btn {
+  background-color: #2d6a4f;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.trip-carousel {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f5f5f5;
+}
+
+.trip-slider {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.trip-slide {
+  display: none;
+  position: relative;
+}
+
+.trip-slide.active {
+  display: block;
+}
+
+@keyframes fade {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.trip-slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.trip-info {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 1.5rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: left;
+}
+
+.trip-slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.trip-slider .prev {
+  left: 15px;
+}
+
+.trip-slider .next {
+  right: 15px;
+}
+
+.trip-table {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.trip-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.trip-table th, .trip-table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+}
+
+.trip-table th {
+  background-color: #8bb398;
+  color: white;
+}
+
+
+
+
